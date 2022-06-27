@@ -1,0 +1,31 @@
+@import '../abstract/variables.scss';
+
+body {
+  margin: unset;
+  font-family: Arial, sans-serif;
+  background-color: $main-content-border;
+}
+
+h3 {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+}
+
+button {
+  background-color: $main-content-button;
+  border: 0;
+  border-radius: 10px;
+  color: $main-content-background;
+  height: 24px;
+  &:hover {
+    cursor: pointer;
+    background-color: $main-content-button-hover;
+  }
+}
+
+.link {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

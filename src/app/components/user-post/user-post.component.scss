@@ -1,9 +1,14 @@
+@import 'src/styles/abstract/mixins';
+@import 'src/styles/abstract/variables';
+
 div.post {
   width: 100%;
   height: 100px;
-  background-color: #fafafa;
-  border: 1px solid #dae0e6;
+  background-color: $main-content-background;
+  border: 1px solid $main-content-border;
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
 
   div.voting {
     height: 100%;
@@ -14,9 +19,9 @@ div.post {
     flex-direction: column;
 
     span {
-      font-family: Arial, sans-serif;
       font-size: 12px;
       font-weight: 600;
+
       &.icon-container {
         font-size: unset;
         width: 25px;
@@ -24,22 +29,80 @@ div.post {
         display: flex;
         justify-content: center;
         align-items: center;
+
         i {
           color: grey;
         }
+
         &:hover {
-          background-color: #dbdbdb;
+          background-color: $main-content-icon-hover;
           border-radius: 2px;
           cursor: pointer;
+
           i.fa-arrow-up {
-            color: #cc3700;
+            color: $main-content-upvote;
           }
+
           i.fa-arrow-down {
-            color: #5a75cc;
-            background-color: #dbdbdb;
+            color: $main-content-downvote;
+            background-color: $main-content-icon-hover;
           }
-        }  
-      }  
+        }
+      }
+    }
+  }
+
+  div.post-image {
+    height: 100%;
+    width: 125px;
+    display: flex;
+    align-items: center;
+
+    div {
+      height: 80%;
+      width: 90%;
+      border-radius: 5px;
+      @include random-hex();
+    }
+  }
+
+  div.post-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: $main-content-font-color;
+
+    div.sub-header {
+      display: flex;      
+      font-size: 12px;
+      font-weight: 700;
+      align-items: center;
+      margin: 0 0 14px 0;
+      a, div, button {
+        margin-right: 8px;
+      }
+    }
+
+    div.icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 500px;
+      font-size: 12px;
+
+      span {
+        display: flex;
+        align-items: center;
+
+        i {
+          padding: 5px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $main-content-icon-hover;
+        }
+      }
     }
   }
 }
