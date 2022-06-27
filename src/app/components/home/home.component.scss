@@ -28,10 +28,12 @@ div.container {
 
         div.post-filter {
           color: $main-content-font-color;
+
           span {
             display: flex;
             align-items: center;
             padding: 5px;
+
             &:hover {
               cursor: pointer;
               background-color: $main-content-icon-hover;
@@ -48,10 +50,125 @@ div.container {
     flex-direction: column;
 
     div.trending {
-      height: 100%;
+      height: 430px;
       background-color: $main-content-background;
       border: 1px solid $main-content-border;
       border-radius: 5px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 18px;
+
+      .header {
+        height: 80px;
+        width: 100%;
+        background-color: $main-content-button;
+        display: flex;
+        align-items: flex-end;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        h4 {
+          color: $main-content-background;
+          margin: 0;
+        }
+      }
+
+      .trending-list {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        font-size: 14px;
+
+        div.trending-item {
+          display: flex;
+          flex-direction: row;
+          height: 48px;
+          border-bottom: 1px solid $main-content-border;
+          align-items: center;
+          gap: 5px;
+          padding-left: 25px;
+
+          img {
+            height: 28px;
+            border-radius: 20px;
+          }
+        }
+
+        i {
+          color: $main-content-trending-up;
+        }
+      }
+
+      button.full {
+        margin: 24px 0;
+        height: 32px;
+        width: 90%;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      div.suggested-trending {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 90%;
+
+        button {
+          background-color: $main-content-input-background;
+          color: $main-content-secondary-button;
+
+          &:hover {
+            background-color: $main-content-secondary-button-background-hover;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    div.premium {
+      display: flex;
+      flex-direction: column;
+      background-color: $main-content-background;
+      height: 90px;
+      align-items: center;
+      border-radius: 5px;
+      padding: 5px;
+      margin-bottom: 18px;
+
+      span {
+        font-size: 12px;
+        &.title {
+          margin-bottom: 4px;
+          font-weight: 700;
+        }
+      }
+
+      button {
+        background-color: $main-content-logo;
+        height: 32px;
+        width: 90%;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 14px;
+      }
+    }
+
+    div.subreddit-info {
+      display: flex;
+      flex-direction: column;
+      background-color: $main-content-background;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 150px;
+      button {
+        width: 90%;
+      }
+      div {
+        font-size: 12px;
+        width: 90%;
+      }
     }
   }
 }

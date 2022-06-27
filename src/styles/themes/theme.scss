@@ -17,9 +17,21 @@ button {
   border-radius: 10px;
   color: $main-content-background;
   height: 24px;
+  &.full {
+    width: 100%;
+    border-radius: 14px;
+  }
   &:hover {
     cursor: pointer;
     background-color: $main-content-button-hover;
+  }
+  &.secondary {
+    background-color: $main-content-secondary-button-background;
+    border: 1px solid $main-content-button;
+    color: $main-content-button;
+    &:hover {
+      background-color: $main-content-secondary-button-background;
+    }
   }
 }
 
